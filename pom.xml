@@ -3,5 +3,20 @@
   <groupId>com.cibc</groupId>
   <artifactId>java-docker-learning</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <build/>
+  <build>
+    <plugins>
+      <!-- Adds Main-Class to manifest so java -jar works -->
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.cibc.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
